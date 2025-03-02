@@ -38,19 +38,19 @@ export default function Footer() {
             <h5 className="mb-3">Channels</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <Link href="/products/channels/web" className="text-decoration-none text-dark">Web</Link>
+                <Link href="/product/channels/web" className="text-decoration-none text-dark">Web</Link>
               </li>
               <li className="mb-2">
-                <Link href="/products/channels/whatsapp" className="text-decoration-none text-dark">WhatsApp</Link>
+                <Link href="/product/channels/whatsapp" className="text-decoration-none text-dark">WhatsApp</Link>
               </li>
               <li className="mb-2">
-                <Link href="/products/channels/instagram" className="text-decoration-none text-dark">Instagram</Link>
+                <Link href="/product/channels/instagram" className="text-decoration-none text-dark">Instagram</Link>
               </li>
               <li className="mb-2">
-                <Link href="/products/channels/messenger" className="text-decoration-none text-dark">Messenger</Link>
+                <Link href="/product/channels/messenger" className="text-decoration-none text-dark">Messenger</Link>
               </li>
               <li className="mb-2">
-                <Link href="/products/channels/slack" className="text-decoration-none text-dark">Slack</Link>
+                <Link href="/product/channels/slack" className="text-decoration-none text-dark">Slack</Link>
               </li>
             </ul>
           </div>
