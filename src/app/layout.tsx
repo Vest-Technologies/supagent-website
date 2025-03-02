@@ -7,6 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './custom-bootstrap.scss'
 import './globals.scss'
 import Script from 'next/script'
+import CookieConsent from '@/components/CookieConsent'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const quicksand = Quicksand({ subsets: ['latin'], variable: '--font-quicksand' })
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <CookieConsent />
         <ScrollToTop />
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script id="bootstrap-init" strategy="afterInteractive">

@@ -1,0 +1,54 @@
+.accordion {
+  --bs-accordion-btn-bg: #f8f9fa;
+  --bs-accordion-active-bg: #f1faff;
+  --bs-accordion-active-color: #1e95e0;
+  
+  .accordion-button {
+    &:not(.collapsed) {
+      box-shadow: none;
+    }
+    
+    &:focus {
+      box-shadow: none;
+      border-color: #5eadf7;
+    }
+  }
+}
+
+.form-control, .form-select {
+  &:focus {
+    border-color: #5eadf7;
+    box-shadow: 0 0 0 0.25rem rgba(94, 173, 247, 0.25);
+  }
+}
+
+.category-badge {
+  background-color: #e6f4f1;
+  color: #1e95e0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+.search-container {
+  background: linear-gradient(135deg, #f1faff 0%, #e6f4f1 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.faq-title {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #1e95e0 0%, #5eadf7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.faq-description {
+  color: #666;
+  font-family: "__Inter_d65c78", "__Inter_Fallback_d65c78", sans-serif;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+} 
