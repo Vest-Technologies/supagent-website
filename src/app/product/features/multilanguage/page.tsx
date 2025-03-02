@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card } from '@/components/BootstrapClient';
+import { Container, Row, Col, Card, CardBody, CardText } from '@/components/BootstrapClient';
 import styles from '../features.module.css';
 
 export default function MultilanguagePage() {
@@ -52,23 +52,23 @@ export default function MultilanguagePage() {
           {languageFeatures.map((feature, index) => (
             <Col key={index} md={6}>
               <Card className="h-100 border-0 shadow-sm">
-                <Card.Body>
+                <CardBody>
                   <div className="d-flex align-items-center mb-4">
                     <div className={`${styles['feature-icon']} fs-1 me-3`}>
                       {feature.icon}
                     </div>
                     <h3 className="h4 mb-0">{feature.title}</h3>
                   </div>
-                  <Card.Text className="text-muted">
+                  <CardText className="text-muted">
                     {feature.description}
-                  </Card.Text>
-                </Card.Body>
+                  </CardText>
+                </CardBody>
               </Card>
             </Col>
           ))}
         </Row>
 
-        <Row className="align-items-center">
+        <Row>
           <Col md={6} className="mb-4 mb-md-0">
             <h2 className="h3 mb-4">Supported Languages</h2>
             <div className={styles['language-grid']}>

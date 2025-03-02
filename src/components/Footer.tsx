@@ -32,15 +32,15 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-md-4 mb-4">
-            <h5 className="mb-3 text-warning">Contact Us</h5>
+            <h5 className="mb-3 text-secondary">Contact Us</h5>
             <p className="text-content">
               Have questions? We're here to help!
               <br />
-              <a href="mailto:support@supagent.com" className="text-decoration-none text-warning">
+              <a href="mailto:support@supagent.com" className="text-decoration-none text-primary">
                 support@supagent.com
               </a>
             </p>
-            <button className="btn btn-warning btn-sm mt-2">Send Message</button>
+            <button className="btn btn-primary btn-sm mt-2">Send Message</button>
           </div>
         </div>
         <hr className="my-4" />

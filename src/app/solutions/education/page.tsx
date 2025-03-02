@@ -332,14 +332,14 @@ export default function EducationPage() {
       {/* CTA Section */}
       <section className="py-5">
         <div className="container text-center">
-          <div className="py-5 px-4 bg-warning text-white rounded-4">
+          <div className="py-5 px-4 bg-primary text-white rounded-4">
             <h2 className="mb-3">Ready to Transform Your Educational Offerings?</h2>
             <p className="lead mb-4">Join forward-thinking educational institutions that have revolutionized learning with SupAgent.</p>
             <div className="d-flex justify-content-center gap-3">
               <Link href="/demo" className="btn btn-light btn-lg">
                 Request Demo
               </Link>
-              <Link href="/contact" className="btn btn-outline-light btn-lg">
+              <Link href="/contact" className="btn btn-warning btn-lg">
                 Contact Sales
               </Link>
             </div>

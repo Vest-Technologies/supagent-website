@@ -207,14 +207,14 @@ export default function OnboardingBuddyPage() {
       {/* Call to Action */}
       <section className="py-5 bg-light">
         <div className="container text-center">
-          <div className="py-5 px-4 bg-warning text-white rounded-4">
+          <div className="py-5 px-4 bg-primary text-white rounded-4">
             <h2 className="mb-3">Ready to Transform Your Onboarding Process?</h2>
             <p className="lead mb-4">Get started with our AI-powered Onboarding Buddy Solution today.</p>
             <div className="d-flex justify-content-center gap-3">
               <Link href="/demo" className="btn btn-light btn-lg">
                 Request Demo
               </Link>
-              <Link href="/contact" className="btn btn-outline-light btn-lg">
+              <Link href="/contact" className="btn btn-warning btn-lg">
                 Contact Sales
               </Link>
             </div>
