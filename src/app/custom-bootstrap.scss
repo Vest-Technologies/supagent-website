@@ -1,0 +1,8 @@
+// Override Bootstrap variables
+$primary: #1e95e0; // Main color
+$secondary: #084f7e;
+$warning: #ff8e03; // Changed from orange to secondary blue
+$light: #f1faff;
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap"; 

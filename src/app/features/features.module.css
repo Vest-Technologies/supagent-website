@@ -1,0 +1,182 @@
+.feature-icon {
+  color: #1e95e0;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #1e95e0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.integration-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.integration-check {
+  color: #1e95e0;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.language-flag {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.language-name {
+  flex-grow: 1;
+}
+
+.language-code {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.sources-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.source-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.source-bullet {
+  color: #1e95e0;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.learning-process {
+  display: grid;
+  gap: 1rem;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.metrics-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.metric-bullet {
+  color: #1e95e0;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.benefits-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.benefit-content {
+  flex-grow: 1;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #1e95e0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #1e95e0;
+  border: 2px solid white;
+}
+
+.timeline-content {
+  padding-left: 0.5rem;
+}
+
+.capabilities-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.capability-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.capability-bullet {
+  color: #1e95e0;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+} 

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agents - The Future of Customer Service</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/placeholder.svg?height=40&width=120" alt="AI Agents Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Product
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Features</a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Training</a></li>
+                  <li><a class="dropdown-item" href="#">Customization</a></li>
+                  <li><a class="dropdown-item" href="#">Multilanguage</a></li>
+                  <li><a class="dropdown-item" href="#">AI Knowledge</a></li>
+                  <li><a class="dropdown-item" href="#">Analytics</a></li>
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">Channels</a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Web</a></li>
+                  <li><a class="dropdown-item" href="#">WhatsApp</a></li>
+                  <li><a class="dropdown-item" href="#">Instagram</a></li>
+                  <li><a class="dropdown-item" href="#">Messenger</a></li>
+                  <li><a class="dropdown-item" href="#">Slack</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Solutions
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Customer Support</a></li>
+              <li><a class="dropdown-item" href="#">Sales Agent</a></li>
+              <li><a class="dropdown-item" href="#">HR Support</a></li>
+              <li><a class="dropdown-item" href="#">Onboarding Buddy</a></li>
+              <li><a class="dropdown-item" href="#">Education</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a href="#" class="btn btn-outline-primary me-2">Sign In</a>
+          <a href="#" class="btn btn-primary">Get Started Free</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <span class="badge bg-light text-primary mb-3">Announcing AI Agents</span>
+          <h1 class="display-4 fw-bold mb-4">The Future of Customer Service</h1>
+          <p class="lead mb-4">Imagine a digital agent you can respond instantly to any customer, anytime, anywhere.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#" class="btn btn-primary btn-lg">Create Your Agent</a>
+            <a href="#" class="btn btn-outline-light btn-lg">See in Action</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image position-relative">
+            <img src="/placeholder.svg?height=500&width=500" alt="AI Agent Demo" class="img-fluid">
+            <div class="chat-bubble chat-bubble-1">
+              <div class="chat-header d-flex align-items-center">
+                <img src="/placeholder.svg?height=30&width=30" alt="Customer Support Agent" class="rounded-circle me-2">
+                <span>Customer Support Agent</span>
+              </div>
+              <p>How can I help you today?</p>
+            </div>
+            <div class="chat-bubble chat-bubble-2">
+              <div class="chat-header d-flex align-items-center">
+                <img src="/placeholder.svg?height=30&width=30" alt="Sales Agent" class="rounded-circle me-2">
+                <span>Sales Agent</span>
+              </div>
+              <p>Would you like to see our pricing plans?</p>
+            </div>
+            <div class="chat-bubble chat-bubble-3">
+              <div class="chat-header d-flex align-items-center">
+                <img src="/placeholder.svg?height=30&width=30" alt="HR Support" class="rounded-circle me-2">
+                <span>HR Support</span>
+              </div>
+              <p>I can answer all your HR questions!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section class="demo-section py-5">
+    <div class="container text-center">
+      <h2 class="demo-title mb-5">Demo: AI Agents in action</h2>
+      <div class="row g-4">
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card phone-agent">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="Phone Agent" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-telephone"></i> Phone Agent</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card chatbot-agent">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="Chatbot Agent" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-chat-dots"></i> Chatbot Agent</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card whatsapp-agent">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="WhatsApp Agent" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-whatsapp"></i> WhatsApp</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card voice-agent">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="Voice Agent" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-mic"></i> Voice Agent</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card messenger-agent">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="Messenger Agent" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-messenger"></i> Messenger</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card agent-app">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="Agent App" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-app"></i> Agent App</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card healthcare-agent">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="Healthcare Agent" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-heart-pulse"></i> Healthcare Agent</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="channel-card kiosk-agent">
+            <div class="card-inner">
+              <img src="/placeholder.svg?height=300&width=150" alt="Kiosk Agent" class="img-fluid">
+              <h5 class="mt-3"><i class="bi bi-display"></i> Kiosk Agent</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Templates Section -->
+  <section class="templates-section py-5">
+    <div class="container text-center">
+      <h2 class="display-6 fw-bold mb-4">7,000+ AI Agent Templates</h2>
+      <p class="lead mb-5">Jumpstart your AI agent with pre-built templates designed for specific industries and use cases</p>
+      
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="template-card">
+                <img src="/placeholder.svg?height=120&width=120" alt="Customer Support Template" class="rounded-circle mb-3">
+                <h5>Customer Support</h5>
+                <p>Handle customer inquiries and resolve issues efficiently</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="template-card">
+                <img src="/placeholder.svg?height=120&width=120" alt="Sales Agent Template" class="rounded-circle mb-3">
+                <h5>Sales Agent</h5>
+                <p>Convert leads and close deals with personalized interactions</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="template-card">
+                <img src="/placeholder.svg?height=120&width=120" alt="HR Support Template" class="rounded-circle mb-3">
+                <h5>HR Support</h5>
+                <p>Answer employee questions and streamline HR processes</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="template-card">
+                <img src="/placeholder.svg?height=120&width=120" alt="Education Template" class="rounded-circle mb-3">
+                <h5>Education</h5>
+                <p>Support students and faculty with instant information</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#" class="btn btn-primary btn-lg mt-5">View More Templates</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="display-6 fw-bold mb-4">Boost your AI Agents with Powerful Tools</h2>
+          <p class="lead mb-4">Customize your AI agents with advanced features for training, personalization, multilanguage support, and analytics — all in a few clicks.</p>
+          <a href="#" class="btn btn-primary btn-lg">Explore All Features</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-robot"></i>
+                </div>
+                <h5>AI Training</h5>
+                <p>Train your agent with your specific knowledge base</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-palette"></i>
+                </div>
+                <h5>Customization</h5>
+                <p>Personalize your agent's appearance and responses</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-translate"></i>
+                </div>
+                <h5>Multilanguage</h5>
+                <p>Support customers in over 100 languages</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+                <h5>Analytics</h5>
+                <p>Track performance and optimize your agent</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-database"></i>
+                </div>
+                <h5>AI Knowledge</h5>
+                <p>Access to extensive knowledge base</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <h5>History</h5>
+                <p>Review past conversations and improve</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile App Section -->
+  <section class="app-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="display-6 fw-bold mb-4">Mobile App for Human Escalation</h2>
+          <p class="lead mb-4">Easily manage complex inquiries on the go and switch your phone into an AI Agent App</p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#" class="app-badge">
+              <img src="/placeholder.svg?height=50&width=150" alt="App Store" class="img-fluid">
+            </a>
+            <a href="#" class="app-badge">
+              <img src="/placeholder.svg?height=50&width=150" alt="Google Play" class="img-fluid">
+            </a>
+          </div>
+          <div class="qr-code">
+            <img src="/placeholder.svg?height=100&width=100" alt="QR Code" class="img-fluid">
+            <span>Scan to download</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="app-image">
+            <img src="/placeholder.svg?height=500&width=400" alt="Mobile App" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section py-5">
+    <div class="container">
+      <h2 class="text-center display-6 fw-bold mb-5">Real Businesses. Real Results.</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="testimonial-card">
+            <div class="d-flex align-items-center mb-3">
+              <img src="/placeholder.svg?height=60&width=60" alt="Client" class="rounded-circle me-3">
+              <div>
+                <h5 class="mb-0">David Rogers</h5>
+                <p class="text-muted mb-0">Customer Support Manager</p>
+              </div>
+            </div>
+            <p>"Our AI agent has been a game-changer for my business, allowing us to provide 24/7 support without increasing our team size. The customization options make it feel like a natural extension of our brand."</p>
+            <div class="company-logo">
+              <img src="/placeholder.svg?height=30&width=100" alt="Company Logo" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="testimonial-card">
+            <div class="d-flex align-items-center mb-3">
+              <img src="/placeholder.svg?height=60&width=60" alt="Client" class="rounded-circle me-3">
+              <div>
+                <h5 class="mb-0">Maria Sanchez</h5>
+                <p class="text-muted mb-0">Sales Director</p>
+              </div>
+            </div>
+            <p>"The AI agent has transformed our lead qualification process. It engages with prospects instantly, qualifies them based on our criteria, and only escalates when human intervention is needed. Our conversion rates have increased by 35%."</p>
+            <div class="company-logo">
+              <img src="/placeholder.svg?height=30&width=100" alt="Company Logo" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section py-5" id="faq">
+    <div class="container">
+      <h2 class="text-center display-6 fw-bold mb-5">FAQ</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  What are AI Agents exactly?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  AI Agents are intelligent virtual assistants powered by advanced artificial intelligence that can handle customer inquiries, provide support, and engage with users across multiple channels. They can be trained on your specific knowledge base to represent your brand accurately.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  How do AI Agents work with humans?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  AI Agents handle routine inquiries and tasks autonomously, but they're designed to seamlessly escalate complex issues to human agents when needed. This hybrid approach ensures customers always receive the appropriate level of support while maximizing your team's efficiency.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  How can I customize an AI Agent for my brand?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can customize your AI Agent's appearance, voice, personality, and knowledge base to align with your brand identity. Our platform provides intuitive tools for training your agent on your specific products, services, and company information.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  What channels can AI Agents support?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Our AI Agents can be deployed across multiple channels including web chat, WhatsApp, Instagram, Facebook Messenger, Slack, phone systems, and custom mobile applications. This omnichannel approach ensures consistent customer experiences regardless of how they choose to engage.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-outline-primary">View More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <img src="/placeholder.svg?height=40&width=120" alt="AI Agents Logo" class="mb-4">
+          <p>Transforming customer interactions with intelligent AI agents that learn and improve over time.</p>
+          <div class="social-icons">
+            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-2"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5>Navigation</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">API Documentation</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Developer Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Data Processing Agreement</a></li>
+            <li><a href="#">GDPR</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Stay Updated</h5>
+          <p>Subscribe to our newsletter for the latest updates and features.</p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your email">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <div class="app-badges">
+            <a href="#" class="me-2">
+              <img src="/placeholder.svg?height=40&width=120" alt="App Store" class="img-fluid">
+            </a>
+            <a href="#">
+              <img src="/placeholder.svg?height=40&width=120" alt="Google Play" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-md-0">© 2025 AI Agents. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Cookies</a></li>
+            <li class="list-inline-item"><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
