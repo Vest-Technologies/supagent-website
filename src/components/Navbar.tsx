@@ -2,11 +2,12 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function Navbar() {
   const pathname = usePathname()
+  const router = useRouter()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -25,6 +26,54 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [pathname])
+
+  // Handle client-side navigation
+  const handleNavigation = (href: string, e: React.MouseEvent) => {
+    e.preventDefault()
+    
+    // If it's the current page, do nothing
+    if (pathname === href) return
+    
+    // Use router.push for client-side navigation
+    router.push(href)
+    
+    // Close the mobile navbar if open
+    if (window.innerWidth < 992) {
+      const navbarCollapse = document.querySelector('.navbar-collapse')
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = new window.bootstrap.Collapse(navbarCollapse)
+        bsCollapse.hide()
+      }
+    }
+  }
+
+  // Toggle submenu visibility
+  const toggleSubmenu = (e: React.MouseEvent) => {
+    if (window.innerWidth < 992) {
+      e.preventDefault()
+      e.stopPropagation()
+      
+      const target = e.currentTarget as HTMLElement
+      const submenu = target.querySelector('.submenu')
+      
+      if (submenu) {
+        // Close all other submenus first
+        document.querySelectorAll('.submenu.show').forEach(menu => {
+          if (menu !== submenu) {
+            menu.classList.remove('show')
+            const parentToggle = menu.closest('.dropdown-submenu')
+            if (parentToggle) {
+              parentToggle.classList.remove('active')
+            }
+          }
+        })
+        
+        // Toggle current submenu
+        submenu.classList.toggle('show')
+        target.classList.toggle('active')
+      }
+    }
+  }
 
   // Translations
   const t = {
@@ -45,7 +94,7 @@ export default function Navbar() {
   return (
     <nav className={navbarClass}>
       <div className="container">
-        <Link href="/" className="navbar-brand">
+        <Link href="/" className="navbar-brand" onClick={(e) => handleNavigation('/', e)}>
           <Image src="/logo.svg" alt="AI Agents Logo" height={50} width={60} />
         </Link>
         
@@ -66,27 +115,27 @@ export default function Navbar() {
               </button>
               <ul className="dropdown-menu" aria-labelledby="productDropdown">
                 <li>
-                  <button type="button" className="dropdown-item dropdown-submenu">
+                  <button type="button" className="dropdown-item dropdown-submenu" onClick={toggleSubmenu}>
                     <span>{t.features}</span>
                     <ul className="dropdown-menu submenu">
-                      <li><Link href="/product/features/training" className="dropdown-item">Training</Link></li>
-                      <li><Link href="/product/features/customization" className="dropdown-item">Customization</Link></li>
-                      <li><Link href="/product/features/multilanguage" className="dropdown-item">Multilanguage</Link></li>
-                      <li><Link href="/product/features/ai-knowledge" className="dropdown-item">AI Knowledge</Link></li>
-                      <li><Link href="/product/features/analytics" className="dropdown-item">Analytics</Link></li>
-                      <li><Link href="/product/features/history" className="dropdown-item">History</Link></li>
+                      <li><a href="/product/features/training" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/training', e)}>Training</a></li>
+                      <li><a href="/product/features/customization" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/customization', e)}>Customization</a></li>
+                      <li><a href="/product/features/multilanguage" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/multilanguage', e)}>Multilanguage</a></li>
+                      <li><a href="/product/features/ai-knowledge" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/ai-knowledge', e)}>AI Knowledge</a></li>
+                      <li><a href="/product/features/analytics" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/analytics', e)}>Analytics</a></li>
+                      <li><a href="/product/features/history" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/history', e)}>History</a></li>
                     </ul>
                   </button>
                 </li>
                 <li>
-                  <button type="button" className="dropdown-item dropdown-submenu">
+                  <button type="button" className="dropdown-item dropdown-submenu" onClick={toggleSubmenu}>
                     <span>{t.channels}</span>
                     <ul className="dropdown-menu submenu">
-                      <li><Link href="/product/channels/web" className="dropdown-item">Web</Link></li>
-                      <li><Link href="/product/channels/whatsapp" className="dropdown-item">WhatsApp</Link></li>
-                      <li><Link href="/product/channels/instagram" className="dropdown-item">Instagram</Link></li>
-                      <li><Link href="/product/channels/messenger" className="dropdown-item">Messenger</Link></li>
-                      <li><Link href="/product/channels/slack" className="dropdown-item">Slack</Link></li>
+                      <li><a href="/product/channels/web" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/web', e)}>Web</a></li>
+                      <li><a href="/product/channels/whatsapp" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/whatsapp', e)}>WhatsApp</a></li>
+                      <li><a href="/product/channels/instagram" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/instagram', e)}>Instagram</a></li>
+                      <li><a href="/product/channels/messenger" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/messenger', e)}>Messenger</a></li>
+                      <li><a href="/product/channels/slack" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/slack', e)}>Slack</a></li>
                     </ul>
                   </button>
                 </li>
@@ -97,35 +146,42 @@ export default function Navbar() {
                 {t.solutions}
               </button>
               <ul className="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <li><Link href="/solutions/customer-support" className="dropdown-item">Customer Support</Link></li>
-                <li><Link href="/solutions/sales-agent" className="dropdown-item">Sales Agent</Link></li>
-                <li><Link href="/solutions/hr-support" className="dropdown-item">HR Support</Link></li>
-                <li><Link href="/solutions/onboarding-buddy" className="dropdown-item">Onboarding Buddy</Link></li>
-                <li><Link href="/solutions/education" className="dropdown-item">Education</Link></li>
+                <li><a href="/solutions/customer-support" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/customer-support', e)}>Customer Support</a></li>
+                <li><a href="/solutions/sales-agent" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/sales-agent', e)}>Sales Agent</a></li>
+                <li><a href="/solutions/hr-support" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/hr-support', e)}>HR Support</a></li>
+                <li><a href="/solutions/onboarding-buddy" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/onboarding-buddy', e)}>Onboarding Buddy</a></li>
+                <li><a href="/solutions/education" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/education', e)}>Education</a></li>
               </ul>
             </li>
             <li className="nav-item">
-              <Link href="/faq" className="nav-link">
+              <a href="/faq" className="nav-link" onClick={(e) => handleNavigation('/faq', e)}>
                 {t.faq}
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link href="/support" className="nav-link">
+              <a href="/support" className="nav-link" onClick={(e) => handleNavigation('/support', e)}>
                 {t.support}
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link href="/pricing" className="nav-link">
+              <a href="/pricing" className="nav-link" onClick={(e) => handleNavigation('/pricing', e)}>
                 {t.pricing}
-              </Link>
+              </a>
             </li>
           </ul>
           <div className="d-flex align-items-center">
-            <Link href="/signin" className="btn btn-outline-primary me-2">{t.signIn}</Link>
-            <Link href="/signup" className="btn btn-primary">{t.getStarted}</Link>
+            <a href="/signin" className="btn btn-outline-primary me-2" onClick={(e) => handleNavigation('/signin', e)}>{t.signIn}</a>
+            <a href="/signup" className="btn btn-primary" onClick={(e) => handleNavigation('/signup', e)}>{t.getStarted}</a>
           </div>
         </div>
       </div>
     </nav>
   )
+}
+
+// Add TypeScript global declaration for Bootstrap
+declare global {
+  interface Window {
+    bootstrap: any;
+  }
 } 
