@@ -32,12 +32,15 @@ export default function BootstrapInit() {
 
       // Handle navigation of actual links (not dropdown toggles)
       const handleNavigation = () => {
-        const navLinks = document.querySelectorAll('#navbarNav a.dropdown-item:not(.dropdown-submenu), #navbarNav a.nav-link:not(.dropdown-toggle)');
+        // Select ALL actual links within the navbar, including those inside dropdowns
+        const navLinks = document.querySelectorAll('#navbarNav a.nav-link:not(.dropdown-toggle), #navbarNav a.dropdown-item');
         const navbarCollapse = document.querySelector('.navbar-collapse');
         
         navLinks.forEach(link => {
-          link.addEventListener('click', () => {
+          link.addEventListener('click', (e) => {
+            // Only close navbar for actual navigation links (not toggle buttons)
             if (window.innerWidth < 992 && navbarCollapse && navbarCollapse.classList.contains('show')) {
+              // Close navbar when clicking on a link
               const bsCollapse = new window.bootstrap.Collapse(navbarCollapse);
               bsCollapse.hide();
             }
@@ -50,27 +53,47 @@ export default function BootstrapInit() {
         document.querySelectorAll('.dropdown-item.dropdown-submenu').forEach(submenuToggle => {
           submenuToggle.addEventListener('click', (e) => {
             if (window.innerWidth < 992) {
-              e.preventDefault();
-              e.stopPropagation();
-              
-              const submenu = submenuToggle.querySelector('.submenu');
-              if (submenu) {
-                // Close all other submenus and remove active class
-                document.querySelectorAll('.submenu.show').forEach(menu => {
-                  if (menu !== submenu) {
-                    menu.classList.remove('show');
-                    const parentToggle = menu.closest('.dropdown-submenu');
-                    if (parentToggle) {
-                      parentToggle.classList.remove('active');
-                    }
-                  }
-                });
+              // Only prevent default for the button itself, not its children
+              const target = e.target as Element; // Type assertion for TypeScript
+              if (target === submenuToggle || target.tagName === 'SPAN') {
+                e.preventDefault();
+                e.stopPropagation();
                 
-                // Toggle this submenu and active class
-                submenu.classList.toggle('show');
-                submenuToggle.classList.toggle('active');
+                const submenu = submenuToggle.querySelector('.submenu');
+                if (submenu) {
+                  // Close all other submenus and remove active class
+                  document.querySelectorAll('.submenu.show').forEach(menu => {
+                    if (menu !== submenu) {
+                      menu.classList.remove('show');
+                      const parentToggle = menu.closest('.dropdown-submenu');
+                      if (parentToggle) {
+                        parentToggle.classList.remove('active');
+                      }
+                    }
+                  });
+                  
+                  // Toggle this submenu and active class
+                  submenu.classList.toggle('show');
+                  submenuToggle.classList.toggle('active');
+                }
               }
             }
+          });
+
+          // Add direct click handlers to the links inside submenu to ensure they work
+          const submenuLinks = submenuToggle.querySelectorAll('.submenu .dropdown-item');
+          submenuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+              // Don't stop propagation, allow the link to work naturally
+              if (window.innerWidth < 992) {
+                // Close navbar when clicking on a link
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                  const bsCollapse = new window.bootstrap.Collapse(navbarCollapse);
+                  bsCollapse.hide();
+                }
+              }
+            });
           });
         });
       };
