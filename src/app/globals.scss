@@ -56,7 +56,7 @@
 body {
   font-family: var(--font-inter);
   color: #333;
-  padding-top: 80px;
+  padding-top: 76px;
   margin: 0;
   box-sizing: border-box;
 }
@@ -73,14 +73,6 @@ body {
   
   &.bg-white {
     background-color: rgba(255, 255, 255, 0.98) !important;
-  }
-  
-  &.bg-light-icy {
-    .dropdown-menu, .submenu {
-      background-color: var(--icy-bg-color) !important;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 15px rgba(30, 149, 224, 0.1);
-    }
   }
   
   .dropdown-menu {
@@ -128,6 +120,7 @@ body {
       right: 15px;
       top: 50%;
       transform: translateY(-50%);
+      transition: transform 0.2s ease;
     }
   }
 
@@ -147,6 +140,7 @@ body {
     padding: 8px 20px;
     position: relative;
     white-space: normal;
+    color: black;
   }
 
   .dropdown-toggle {
@@ -217,9 +211,18 @@ body {
       &:after {
         transform: rotate(90deg);
         right: 1rem;
+        top: 1.2rem;
+        position: absolute;
+        transition: transform 0.2s ease;
       }
       
       &.show:after {
+        transform: rotate(-90deg);
+        top: 1.2rem;
+        right: 1rem;
+      }
+
+      &.active:after {
         transform: rotate(-90deg);
       }
     }
@@ -229,6 +232,7 @@ body {
       padding: 0.75rem 1rem;
       
       &:active, &:focus {
+        color: black;
         background-color: transparent;
       }
     }
@@ -249,6 +253,16 @@ body {
       .btn {
         width: 150px;
         text-align: center;
+      }
+    }
+
+    // Force correct positioning for dropdown toggle arrows
+    .nav-link.dropdown-toggle {
+      &:after {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
@@ -559,5 +573,50 @@ section {
   
   &:hover {
     background-color: rgba(0, 0, 0, 0.02);
+  }
+}
+
+// Dropdown styling improvements
+button.dropdown-item {
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  
+  &:focus, &:active {
+    background-color: rgba(30, 149, 224, 0.1);
+    outline: none;
+  }
+}
+
+// Enhance dropdown transitions for mobile
+@media (max-width: 991.98px) {
+  .navbar {
+    .dropdown-item.dropdown-submenu {
+      position: relative;
+      
+      &:after {
+        position: absolute;
+        right: 1rem;
+        top: 1.2rem; 
+        transform: rotate(90deg);
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      &.active:after,
+      &.show:after {
+        transform: rotate(-90deg);
+      }
+    }
+    
+    .submenu {
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      
+      &.show {
+        max-height: 1000px; // large enough to show all content
+      }
+    }
   }
 } 

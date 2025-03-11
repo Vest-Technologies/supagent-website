@@ -40,7 +40,7 @@ export default function Navbar() {
     getStarted: 'Get Started Free'
   }
 
-  const navbarClass = `navbar navbar-expand-lg navbar-light fixed-top py-3 ${scrolled ? 'bg-light-icy' : 'bg-white'}`
+  const navbarClass = `navbar navbar-expand-lg navbar-light fixed-top py-2 ${scrolled ? 'bg-light-icy' : 'bg-white'}`
 
   return (
     <nav className={navbarClass}>
