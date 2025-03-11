@@ -9,6 +9,10 @@ export default function Navbar() {
   const pathname = usePathname()
   const router = useRouter()
   const [scrolled, setScrolled] = useState(false)
+  const [mobileProductOpen, setMobileProductOpen] = useState(false)
+  const [mobileFeatureOpen, setMobileFeatureOpen] = useState(false)
+  const [mobileChannelOpen, setMobileChannelOpen] = useState(false)
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false)
 
   useEffect(() => {
     // Add scroll event listener
@@ -44,33 +48,45 @@ export default function Navbar() {
         const bsCollapse = new window.bootstrap.Collapse(navbarCollapse)
         bsCollapse.hide()
       }
+      
+      // Reset all mobile dropdown states
+      setMobileProductOpen(false)
+      setMobileFeatureOpen(false)
+      setMobileChannelOpen(false)
+      setMobileSolutionsOpen(false)
     }
   }
 
-  // Toggle submenu visibility
-  const toggleSubmenu = (e: React.MouseEvent) => {
+  // Toggle mobile dropdowns
+  const toggleMobileDropdown = (dropdown: string, e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    
     if (window.innerWidth < 992) {
-      e.preventDefault()
-      e.stopPropagation()
-      
-      const target = e.currentTarget as HTMLElement
-      const submenu = target.querySelector('.submenu')
-      
-      if (submenu) {
-        // Close all other submenus first
-        document.querySelectorAll('.submenu.show').forEach(menu => {
-          if (menu !== submenu) {
-            menu.classList.remove('show')
-            const parentToggle = menu.closest('.dropdown-submenu')
-            if (parentToggle) {
-              parentToggle.classList.remove('active')
-            }
-          }
-        })
-        
-        // Toggle current submenu
-        submenu.classList.toggle('show')
-        target.classList.toggle('active')
+      if (dropdown === 'product') {
+        setMobileProductOpen(!mobileProductOpen)
+        setMobileSolutionsOpen(false)
+      } else if (dropdown === 'solutions') {
+        setMobileSolutionsOpen(!mobileSolutionsOpen)
+        setMobileProductOpen(false)
+        setMobileFeatureOpen(false)
+        setMobileChannelOpen(false)
+      }
+    }
+  }
+  
+  // Toggle mobile submenu
+  const toggleMobileSubmenu = (submenu: string, e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    
+    if (window.innerWidth < 992) {
+      if (submenu === 'features') {
+        setMobileFeatureOpen(!mobileFeatureOpen)
+        setMobileChannelOpen(false)
+      } else if (submenu === 'channels') {
+        setMobileChannelOpen(!mobileChannelOpen)
+        setMobileFeatureOpen(false)
       }
     }
   }
@@ -109,15 +125,25 @@ export default function Navbar() {
         
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
-            <li className="nav-item dropdown">
-              <button className="nav-link dropdown-toggle" type="button" id="productDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className={`nav-item dropdown ${mobileProductOpen ? 'show' : ''}`}>
+              <button 
+                className="nav-link dropdown-toggle" 
+                type="button" 
+                id="productDropdown" 
+                onClick={(e) => toggleMobileDropdown('product', e)}
+                aria-expanded={mobileProductOpen ? 'true' : 'false'}
+              >
                 {t.product}
               </button>
-              <ul className="dropdown-menu" aria-labelledby="productDropdown">
+              <ul className={`dropdown-menu ${mobileProductOpen ? 'show' : ''}`} aria-labelledby="productDropdown">
                 <li>
-                  <button type="button" className="dropdown-item dropdown-submenu" onClick={toggleSubmenu}>
+                  <button 
+                    type="button" 
+                    className={`dropdown-item dropdown-submenu ${mobileFeatureOpen ? 'active' : ''}`}
+                    onClick={(e) => toggleMobileSubmenu('features', e)}
+                  >
                     <span>{t.features}</span>
-                    <ul className="dropdown-menu submenu">
+                    <ul className={`dropdown-menu submenu ${mobileFeatureOpen ? 'show' : ''}`}>
                       <li><a href="/product/features/training" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/training', e)}>Training</a></li>
                       <li><a href="/product/features/customization" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/customization', e)}>Customization</a></li>
                       <li><a href="/product/features/multilanguage" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/multilanguage', e)}>Multilanguage</a></li>
@@ -128,9 +154,13 @@ export default function Navbar() {
                   </button>
                 </li>
                 <li>
-                  <button type="button" className="dropdown-item dropdown-submenu" onClick={toggleSubmenu}>
+                  <button 
+                    type="button" 
+                    className={`dropdown-item dropdown-submenu ${mobileChannelOpen ? 'active' : ''}`}
+                    onClick={(e) => toggleMobileSubmenu('channels', e)}
+                  >
                     <span>{t.channels}</span>
-                    <ul className="dropdown-menu submenu">
+                    <ul className={`dropdown-menu submenu ${mobileChannelOpen ? 'show' : ''}`}>
                       <li><a href="/product/channels/web" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/web', e)}>Web</a></li>
                       <li><a href="/product/channels/whatsapp" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/whatsapp', e)}>WhatsApp</a></li>
                       <li><a href="/product/channels/instagram" className="dropdown-item" onClick={(e) => handleNavigation('/product/channels/instagram', e)}>Instagram</a></li>
@@ -141,11 +171,17 @@ export default function Navbar() {
                 </li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
-              <button className="nav-link dropdown-toggle" type="button" id="solutionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className={`nav-item dropdown ${mobileSolutionsOpen ? 'show' : ''}`}>
+              <button 
+                className="nav-link dropdown-toggle" 
+                type="button" 
+                id="solutionsDropdown" 
+                onClick={(e) => toggleMobileDropdown('solutions', e)}
+                aria-expanded={mobileSolutionsOpen ? 'true' : 'false'}
+              >
                 {t.solutions}
               </button>
-              <ul className="dropdown-menu" aria-labelledby="solutionsDropdown">
+              <ul className={`dropdown-menu ${mobileSolutionsOpen ? 'show' : ''}`} aria-labelledby="solutionsDropdown">
                 <li><a href="/solutions/customer-support" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/customer-support', e)}>Customer Support</a></li>
                 <li><a href="/solutions/sales-agent" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/sales-agent', e)}>Sales Agent</a></li>
                 <li><a href="/solutions/hr-support" className="dropdown-item" onClick={(e) => handleNavigation('/solutions/hr-support', e)}>HR Support</a></li>

@@ -140,7 +140,7 @@ body {
     padding: 8px 20px;
     position: relative;
     white-space: normal;
-    color: black;
+    color: var(--bs-nav-link-hover-color);
   }
 
   .dropdown-toggle {
@@ -199,9 +199,12 @@ body {
       border-left: 2px solid var(--primary);
       padding-left: 1rem;
       background-color: transparent !important;
+      max-height: none !important;
+      overflow: visible !important;
       
       &.show {
-        display: block;
+        display: block !important;
+        max-height: none !important;
       }
     }
     
@@ -209,20 +212,15 @@ body {
       padding-right: 0;
       
       &:after {
-        transform: rotate(90deg);
-        right: 1rem;
-        top: 1.2rem;
         position: absolute;
-        transition: transform 0.2s ease;
+        right: 1rem;
+        top: 1.2rem; 
+        transform: rotate(90deg);
+        transition: transform 0.2s ease-in-out;
       }
       
+      &.active:after,
       &.show:after {
-        transform: rotate(-90deg);
-        top: 1.2rem;
-        right: 1rem;
-      }
-
-      &.active:after {
         transform: rotate(-90deg);
       }
     }
@@ -232,7 +230,7 @@ body {
       padding: 0.75rem 1rem;
       
       &:active, &:focus {
-        color: black;
+        color: var(--bs-nav-link-hover-color);
         background-color: transparent;
       }
     }
@@ -586,6 +584,16 @@ button.dropdown-item {
   &:focus, &:active {
     background-color: rgba(30, 149, 224, 0.1);
     outline: none;
+  }
+  
+  &.dropdown-submenu {
+    position: relative;
+    display: flex;
+    padding-right: 30px;
+    
+    @media (max-width: 991.98px) {
+      padding: 0.75rem 1rem;
+    }
   }
 }
 

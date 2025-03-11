@@ -1,13 +1,10 @@
 'use client';
 
-import { useEffect, useLayoutEffect } from 'react';
-
-// Use a shim for useLayoutEffect in SSR environments
-const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+import { useEffect } from 'react';
 
 export default function BootstrapInit() {
-  useIsomorphicLayoutEffect(() => {
-    // Function to initialize all the navbar functionality
+  useEffect(() => {
+    // Function to initialize navbar toggler
     const initNavbar = () => {
       // Check if Bootstrap is available
       if (typeof window === 'undefined' || !window.bootstrap) {
@@ -15,80 +12,20 @@ export default function BootstrapInit() {
         return;
       }
 
-      // Clean up any existing Bootstrap instances
-      const cleanupBootstrapInstances = () => {
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-          const instance = window.bootstrap.Dropdown.getInstance(toggle);
-          if (instance) {
-            instance.dispose();
-          }
-        });
-      };
-
-      // Clean up existing instances
-      cleanupBootstrapInstances();
-
-      // Initialize top-level dropdowns
-      const initDropdowns = () => {
-        const dropdownToggles = document.querySelectorAll('.nav-link.dropdown-toggle');
-        
-        dropdownToggles.forEach(toggle => {
-          // Create new dropdown instance
-          new window.bootstrap.Dropdown(toggle);
-          
-          // Add custom handler for mobile
-          toggle.addEventListener('click', () => {
-            if (window.innerWidth < 992) {
-              // Get current dropdown
-              const currentDropdown = toggle.parentElement;
-              
-              // Close other dropdowns
-              document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
-                if (dropdown !== currentDropdown && dropdown.querySelector('.dropdown-menu.show')) {
-                  const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-                  if (dropdownToggle) {
-                    const instance = window.bootstrap.Dropdown.getInstance(dropdownToggle);
-                    if (instance) {
-                      instance.hide();
-                    }
-                  }
-                }
-              });
-
-              // Close any open submenus when opening a new top-level dropdown
-              document.querySelectorAll('.submenu.show').forEach(submenu => {
-                submenu.classList.remove('show');
-                const parentToggle = submenu.closest('.dropdown-submenu');
-                if (parentToggle) {
-                  parentToggle.classList.remove('active');
-                }
-              });
-            }
-          });
-        });
-      };
-
       // Initialize Collapse for navbar toggler
       const initNavbarToggler = () => {
         const navbarToggler = document.querySelector('.navbar-toggler');
-        if (navbarToggler) {
-          navbarToggler.addEventListener('click', () => {
-            // Close any open dropdowns when toggling the navbar
-            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-              const dropdownToggle = menu.previousElementSibling;
-              if (dropdownToggle && dropdownToggle.classList.contains('dropdown-toggle')) {
-                const instance = window.bootstrap.Dropdown.getInstance(dropdownToggle);
-                if (instance) {
-                  instance.hide();
-                }
-              }
-            });
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        if (navbarToggler && navbarCollapse) {
+          // Initialize the collapse component
+          new window.bootstrap.Collapse(navbarCollapse, {
+            toggle: false
           });
         }
       };
 
-      // Initialize everything
-      initDropdowns();
+      // Initialize navbar toggler
       initNavbarToggler();
     };
 
