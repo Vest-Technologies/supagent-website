@@ -24,7 +24,7 @@ export default function Footer() {
                 <Link href="/product/features/multilanguage" className="text-decoration-none text-dark">Multilanguage</Link>
               </li>
               <li className="mb-2">
-                <Link href="/product/features/ai-knowledge" className="text-decoration-none text-dark">AI Knowledge</Link>
+                <Link href="/product/features/ai-technology" className="text-decoration-none text-dark">AI Technology</Link>
               </li>
               <li className="mb-2">
                 <Link href="/product/features/analytics" className="text-decoration-none text-dark">Analytics</Link>

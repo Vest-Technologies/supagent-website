@@ -24,9 +24,9 @@ export default function Navbar() {
         setScrolled(false)
       }
     }
-    
+
     window.addEventListener('scroll', handleScroll)
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
@@ -35,13 +35,13 @@ export default function Navbar() {
   // Handle client-side navigation
   const handleNavigation = (href: string, e: React.MouseEvent) => {
     e.preventDefault()
-    
+
     // If it's the current page, do nothing
     if (pathname === href) return
-    
+
     // Use router.push for client-side navigation
     router.push(href)
-    
+
     // Close the mobile navbar if open
     if (window.innerWidth < 992) {
       const navbarCollapse = document.querySelector('.navbar-collapse')
@@ -49,7 +49,7 @@ export default function Navbar() {
         const bsCollapse = new window.bootstrap.Collapse(navbarCollapse)
         bsCollapse.hide()
       }
-      
+
       // Reset all mobile dropdown states
       setMobileProductOpen(false)
       setMobileFeatureOpen(false)
@@ -62,7 +62,7 @@ export default function Navbar() {
   const toggleMobileDropdown = (dropdown: string, e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-    
+
     if (window.innerWidth < 992) {
       if (dropdown === 'product') {
         setMobileProductOpen(!mobileProductOpen)
@@ -75,12 +75,12 @@ export default function Navbar() {
       }
     }
   }
-  
+
   // Toggle mobile submenu
   const toggleMobileSubmenu = (submenu: string, e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-    
+
     if (window.innerWidth < 992) {
       if (submenu === 'features') {
         setMobileFeatureOpen(!mobileFeatureOpen)
@@ -115,7 +115,7 @@ export default function Navbar() {
         <Link href="/" className="navbar-brand" onClick={(e) => handleNavigation('/', e)}>
           <Image src="/logo.svg" alt="AI Agents Logo" height={50} width={60} />
         </Link>
-        
+
         <button
           className="navbar-toggler"
           type="button"
@@ -124,14 +124,14 @@ export default function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        
+
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className={`nav-item dropdown ${mobileProductOpen ? 'show' : ''}`}>
-              <button 
-                className="nav-link dropdown-toggle" 
-                type="button" 
-                id="productDropdown" 
+              <button
+                className="nav-link dropdown-toggle"
+                type="button"
+                id="productDropdown"
                 onClick={(e) => toggleMobileDropdown('product', e)}
                 aria-expanded={mobileProductOpen ? 'true' : 'false'}
               >
@@ -139,8 +139,8 @@ export default function Navbar() {
               </button>
               <ul className={`dropdown-menu ${mobileProductOpen ? 'show' : ''}`} aria-labelledby="productDropdown">
                 <li>
-                  <button 
-                    type="button" 
+                  <button
+                    type="button"
                     className={`dropdown-item dropdown-submenu ${mobileFeatureOpen ? 'active' : ''}`}
                     onClick={(e) => toggleMobileSubmenu('features', e)}
                   >
@@ -149,15 +149,37 @@ export default function Navbar() {
                       <li><a href="/product/features/training" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/training', e)}>Training</a></li>
                       <li><a href="/product/features/customization" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/customization', e)}>Customization</a></li>
                       <li><a href="/product/features/multilanguage" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/multilanguage', e)}>Multilanguage</a></li>
-                      {/* <li><a href="/product/features/ai-knowledge" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/ai-knowledge', e)}>AI Knowledge</a></li> */}
+                      <li><a href="/product/features/ai-technology" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/ai-technology', e)}>AI Technology</a></li>
                       <li><a href="/product/features/analytics" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/analytics', e)}>Analytics</a></li>
-                      {/* <li><a href="/product/features/history" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/history', e)}>History</a></li> */}
+                      <li><a href="/product/features/history" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/history', e)}>Chat History</a></li>
+                      <li>
+                        <div className="dropdown-item d-flex align-items-center justify-content-between" style={{ cursor: 'default', pointerEvents: 'none' }}>
+                          Action Flow
+                          <span
+                            className="ms-2 d-inline-flex align-items-center"
+                            style={{
+                              fontSize: '0.65rem',
+                              fontWeight: 600,
+                              backgroundColor: 'rgba(255, 142, 3, 0.15)',
+                              color: '#ff8e03',
+                              padding: '1px 6px',
+                              borderRadius: '4px',
+                              boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                              letterSpacing: '0.2px',
+                              textTransform: 'uppercase',
+                              whiteSpace: 'nowrap'
+                            }}
+                          >
+                            Coming soon
+                          </span>
+                        </div>
+                      </li>
                     </ul>
                   </button>
                 </li>
                 <li>
-                  <button 
-                    type="button" 
+                  <button
+                    type="button"
                     className={`dropdown-item dropdown-submenu ${mobileChannelOpen ? 'active' : ''}`}
                     onClick={(e) => toggleMobileSubmenu('channels', e)}
                   >
@@ -174,10 +196,10 @@ export default function Navbar() {
               </ul>
             </li>
             <li className={`nav-item dropdown ${mobileSolutionsOpen ? 'show' : ''}`}>
-              <button 
-                className="nav-link dropdown-toggle" 
-                type="button" 
-                id="solutionsDropdown" 
+              <button
+                className="nav-link dropdown-toggle"
+                type="button"
+                id="solutionsDropdown"
                 onClick={(e) => toggleMobileDropdown('solutions', e)}
                 aria-expanded={mobileSolutionsOpen ? 'true' : 'false'}
               >
@@ -212,8 +234,8 @@ export default function Navbar() {
             <a href="/signin" className="btn btn-outline-primary me-2" onClick={(e) => handleNavigation('/signin', e)}>{t.signIn}</a>
             <a href="/signup" className="btn btn-primary" onClick={(e) => handleNavigation('/signup', e)}>{t.getStarted}</a>
             */}
-            <motion.a 
-              href="/waitlist" 
+            <motion.a
+              href="/waitlist"
               className="btn btn-warning w-100"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

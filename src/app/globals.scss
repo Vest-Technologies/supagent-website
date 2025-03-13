@@ -2049,4 +2049,131 @@ button.dropdown-item {
       margin-top: 2.5rem;
     }
   }
+}
+
+// Channel Image Container Styles - Simplified with obvious animations
+.channel-image-container {
+  position: relative;
+  border-radius: 16px;
+  padding: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  
+  img {
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    transform-origin: center;
+    animation: imageScale 2s ease-in-out infinite alternate;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  // Floating icons
+  .floating-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    
+    &.icon-1 {
+      top: 20px;
+      right: 30px;
+      animation: floatingIcon 4s ease-in-out infinite;
+    }
+    
+    &.icon-2 {
+      bottom: 30px;
+      left: 25px;
+      animation: floatingIcon 4s ease-in-out infinite 1s;
+    }
+    
+    i {
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+  }
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  // Channel-specific variations
+  &.web-channel {
+    background-color: #f8e4e1;
+    
+    &:before {
+      background-size: 600% 600%;
+    }
+    
+    .floating-icon i {
+      color: #e0351e;
+    }
+  }
+  
+  &.whatsapp-channel {
+    background-color: rgba(0, 208, 156, 0.1);
+    
+    &:before {
+      background-size: 600% 600%;
+    }
+    
+    .floating-icon i {
+      color: #00d09c;
+    }
+  }
+  
+  &.messenger-channel {
+    background-color: rgba(37, 117, 252, 0.1);
+    
+    &:before {
+      background-size: 600% 600%;
+    }
+    
+    .floating-icon i {
+      color: #0084ff;
+    }
+  }
+  
+  &.slack-channel {
+    background-color: rgba(74, 21, 75, 0.1);
+    
+    &:before {
+      background-size: 600% 600%;
+    }
+    
+    .floating-icon i {
+      color: #4a154b;
+    }
+  }
+  
+  &.instagram-channel {
+    background-color: rgba(225, 48, 108, 0.1);
+    
+    &:before {
+      background-size: 600% 600%;
+    }
+    
+    .floating-icon i {
+      color: #e1306c;
+    }
+  }
+}
+
+@keyframes imageScale {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+@keyframes floatingIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
 } 

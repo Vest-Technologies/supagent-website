@@ -21,9 +21,9 @@ const features = [
     icon: '🌐'
   },
   {
-    title: 'AI Knowledge',
+    title: 'AI Technology',
     description: 'Leverage advanced AI capabilities for smarter interactions',
-    path: '/features/ai-knowledge',
+    path: '/features/ai-technology',
     icon: '🧠'
   },
   {

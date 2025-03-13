@@ -73,7 +73,6 @@ export default function IntegrationChannels() {
                           <ComingSoonBadge 
                             position="top-right" 
                             size="small" 
-                            color="#FF3D57" 
                             rotate={-15} 
                           />
                           <span className="logo-name">{channel.name}</span>
@@ -104,7 +103,6 @@ export default function IntegrationChannels() {
                       <ComingSoonBadge 
                         position="top-right" 
                         size="small" 
-                        color="#FF3D57" 
                         rotate={-15} 
                       />
                       <span className="logo-name">{integration.name}</span>

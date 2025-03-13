@@ -13,7 +13,7 @@ interface ComingSoonBadgeProps {
 export default function ComingSoonBadge({
   position = 'top-right',
   size = 'medium',
-  color = '#FF3D57',
+  color = '#ff8e03',
   rotate = -15,
 }: ComingSoonBadgeProps) {
   // Determine size classes
