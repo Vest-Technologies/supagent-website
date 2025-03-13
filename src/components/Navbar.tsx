@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -102,7 +103,8 @@ export default function Navbar() {
     support: 'Support',
     pricing: 'Pricing',
     signIn: 'Sign In',
-    getStarted: 'Get Started Free'
+    getStarted: 'Get Started Free',
+    joinWaitlist: 'Join the Waiting List'
   }
 
   const navbarClass = `navbar navbar-expand-lg navbar-light fixed-top py-2 ${scrolled ? 'bg-light-icy' : 'bg-white'}`
@@ -147,9 +149,9 @@ export default function Navbar() {
                       <li><a href="/product/features/training" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/training', e)}>Training</a></li>
                       <li><a href="/product/features/customization" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/customization', e)}>Customization</a></li>
                       <li><a href="/product/features/multilanguage" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/multilanguage', e)}>Multilanguage</a></li>
-                      <li><a href="/product/features/ai-knowledge" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/ai-knowledge', e)}>AI Knowledge</a></li>
+                      {/* <li><a href="/product/features/ai-knowledge" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/ai-knowledge', e)}>AI Knowledge</a></li> */}
                       <li><a href="/product/features/analytics" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/analytics', e)}>Analytics</a></li>
-                      <li><a href="/product/features/history" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/history', e)}>History</a></li>
+                      {/* <li><a href="/product/features/history" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/history', e)}>History</a></li> */}
                     </ul>
                   </button>
                 </li>
@@ -206,8 +208,20 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="d-flex align-items-center">
+            {/* Original buttons commented out for future use
             <a href="/signin" className="btn btn-outline-primary me-2" onClick={(e) => handleNavigation('/signin', e)}>{t.signIn}</a>
             <a href="/signup" className="btn btn-primary" onClick={(e) => handleNavigation('/signup', e)}>{t.getStarted}</a>
+            */}
+            <motion.a 
+              href="/waitlist" 
+              className="btn btn-warning w-100"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={(e) => handleNavigation('/waitlist', e)}
+            >
+              <i className="bi bi-envelope-check me-2"></i>
+              {t.joinWaitlist}
+            </motion.a>
           </div>
         </div>
       </div>

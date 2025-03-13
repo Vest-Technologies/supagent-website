@@ -1,103 +1,101 @@
 'use client';
 
 import Image from 'next/image'
+import Link from 'next/link'
 import AnimatedSection, { AnimatedItem } from './AnimatedSection'
 import { fadeUpVariant, scaleUpVariant, staggerContainerVariant } from '@/lib/animation'
 import { motion } from 'framer-motion'
 
+const solutions = [
+  {
+    title: 'Customer Support',
+    icon: '/illustrations/customer-support.svg',
+    description: 'Automated support for customer inquiries and requests',
+    color: 'var(--primary)',
+    delay: 0,
+    link: '/solutions/customer-support'
+  },
+  {
+    title: 'Sales Agent',
+    icon: '/illustrations/sales-agent.svg',
+    description: 'AI-powered sales support and lead management',
+    color: 'var(--orange)',
+    delay: 1,
+    link: '/solutions/sales-agent'
+  },
+  {
+    title: 'HR Support',
+    icon: '/illustrations/hr-support.svg',
+    description: 'Automated HR processes and employee support',
+    color: 'var(--green)',
+    delay: 2,
+    link: '/solutions/hr-support'
+  },
+  {
+    title: 'Onboarding Buddy',
+    icon: '/illustrations/onboarding.svg',
+    description: 'Streamlined onboarding and training support',
+    color: 'var(--blue)',
+    delay: 3,
+    link: '/solutions/onboarding-buddy'
+  },
+  {
+    title: 'Education',
+    icon: '/illustrations/education.svg',
+    description: 'AI-powered educational support and guidance',
+    color: 'var(--secondary)',
+    delay: 4,
+    link: '/solutions/education'
+  }
+];
+
 export default function Solutions() {
   return (
-    <section className="templates-section">
-      <div className="container text-center">
-        <AnimatedSection variants={fadeUpVariant}>
-          <h2 className="display-6 fw-bold mb-4">Solutions for Every Need</h2>
-          <p className="lead mb-5">Our AI-driven solution offers comprehensive support across various business needs</p>
+    <section className="solutions-section py-5">
+      <div className="container">
+        <AnimatedSection variants={fadeUpVariant} className="text-center mb-5">
+          <h2 className="section-title">Solutions for Every Need</h2>
+          <p className="section-subtitle">Our AI-driven solution offers comprehensive support across various business needs</p>
         </AnimatedSection>
         
         <div className="row">
-          <div className="col-lg-10 mx-auto">
-            <AnimatedSection variants={staggerContainerVariant} className="row g-4">
-              <div className="col-md-6 col-lg-3">
-                <AnimatedItem variants={scaleUpVariant} delay={0}>
+          <div className="col-12">
+            <AnimatedSection variants={staggerContainerVariant} className="solutions-wrapper">
+              {solutions.map((solution, index) => (
+                <AnimatedItem variants={scaleUpVariant} delay={solution.delay} key={index}>
                   <motion.div 
-                    className="template-card"
+                    className="solution-card"
+                    style={{ 
+                      borderTopColor: solution.color,
+                    }}
                     whileHover={{ 
                       y: -10,
-                      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
+                      boxShadow: '0 15px 30px rgba(0, 0, 0, 0.1)',
                       transition: { duration: 0.3 }
                     }}
                   >
-                    <Image src="/illustrations/customer-support.svg" alt="Customer Support" width={120} height={120} className="rounded-circle mb-3" />
-                    <h5>Customer Support</h5>
-                    <p>Automated support for customer inquiries and requests</p>
+                    <div className="solution-icon" style={{ backgroundColor: `${solution.color}20` }}>
+                      <Image src={solution.icon} alt={solution.title} width={60} height={60} />
+                    </div>
+                    <h5 className="solution-title" style={{ color: solution.color }}>{solution.title}</h5>
+                    <p className="solution-desc">{solution.description}</p>
+                    <Link href={solution.link}>
+                      <motion.button 
+                        className="solution-btn"
+                        style={{ backgroundColor: `${solution.color}15`, color: solution.color }}
+                        whileHover={{ 
+                          backgroundColor: solution.color,
+                          color: 'white',
+                          transition: { duration: 0.3 }
+                        }}
+                      >
+                        Learn more
+                        <i className="bi bi-arrow-right ms-2"></i>
+                      </motion.button>
+                    </Link>
                   </motion.div>
                 </AnimatedItem>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <AnimatedItem variants={scaleUpVariant} delay={1}>
-                  <motion.div 
-                    className="template-card" 
-                    style={{ borderTop: '4px solid var(--orange)' }}
-                    whileHover={{ 
-                      y: -10,
-                      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-                      transition: { duration: 0.3 }
-                    }}
-                  >
-                    <Image src="/illustrations/sales-agent.svg" alt="Sales Agent" width={120} height={120} className="rounded-circle mb-3" />
-                    <h5 className="text-warning">Sales Agent</h5>
-                    <p>AI-powered sales support and lead management</p>
-                  </motion.div>
-                </AnimatedItem>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <AnimatedItem variants={scaleUpVariant} delay={2}>
-                  <motion.div 
-                    className="template-card"
-                    whileHover={{ 
-                      y: -10,
-                      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-                      transition: { duration: 0.3 }
-                    }}
-                  >
-                    <Image src="/illustrations/hr-support.svg" alt="HR Support" width={120} height={120} className="rounded-circle mb-3" />
-                    <h5>HR Support</h5>
-                    <p>Automated HR processes and employee support</p>
-                  </motion.div>
-                </AnimatedItem>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <AnimatedItem variants={scaleUpVariant} delay={3}>
-                  <motion.div 
-                    className="template-card"
-                    whileHover={{ 
-                      y: -10,
-                      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-                      transition: { duration: 0.3 }
-                    }}
-                  >
-                    <Image src="/illustrations/onboarding.svg" alt="Onboarding Buddy" width={120} height={120} className="rounded-circle mb-3" />
-                    <h5>Onboarding Buddy</h5>
-                    <p>Streamlined onboarding and training support</p>
-                  </motion.div>
-                </AnimatedItem>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <AnimatedItem variants={scaleUpVariant} delay={4}>
-                  <motion.div 
-                    className="template-card"
-                    whileHover={{ 
-                      y: -10,
-                      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-                      transition: { duration: 0.3 }
-                    }}
-                  >
-                    <Image src="/illustrations/education.svg" alt="Education" width={120} height={120} className="rounded-circle mb-3" />
-                    <h5>Education</h5>
-                    <p>AI-powered educational support and guidance</p>
-                  </motion.div>
-                </AnimatedItem>
-              </div>
+              ))}
             </AnimatedSection>
           </div>
         </div>

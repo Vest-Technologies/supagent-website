@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import Hero from '@/components/Hero'
-import Features from '@/components/Features'
-import Channels from '@/components/Channels'
+import IntegrationChannels from '@/components/IntegrationChannels'
 import Solutions from '@/components/Solutions'
 import PageTransition from '@/components/PageTransition'
+import PageShowcase from '@/components/PageShowcase'
+import SetupSteps from '@/components/SetupSteps'
 
 export const metadata: Metadata = {
-  title: 'SupAgent - Home',
-  description: 'AI-Driven Agent Integrated Support Solution for modern businesses',
+  title: 'SupAgent - AI-Driven Support Solution - Coming Soon',
+  description: 'AI-Driven Agent Integrated Support Solution for modern businesses - Join our waiting list',
 }
 
 export default function Home() {
@@ -15,9 +16,10 @@ export default function Home() {
     <PageTransition>
       <main>
         <Hero />
-        <Features />
-        <Channels />
         <Solutions />
+        <PageShowcase />
+        <IntegrationChannels />
+        <SetupSteps />
       </main>
     </PageTransition>
   )

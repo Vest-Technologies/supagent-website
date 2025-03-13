@@ -234,10 +234,11 @@ export default function SalesAgentPage() {
             <h2 className="mb-3">Ready to Transform Your Sales Process?</h2>
             <p className="lead mb-4">Get started with our AI-powered Sales Agent Solution today.</p>
             <div className="d-flex justify-content-center gap-3">
-              <Link href="/demo" className="btn btn-light btn-lg">
-                Request Demo
+              <Link href="/waitlist" className="btn btn-warning btn-lg">
+                <i className="bi bi-envelope-check me-2"></i>
+                Join the Waiting List
               </Link>
-              <Link href="/contact" className="btn btn-warning btn-lg">
+              <Link href="/support" className="btn btn-light btn-lg">
                 Contact Sales
               </Link>
             </div>

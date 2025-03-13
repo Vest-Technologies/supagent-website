@@ -12,7 +12,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="col-md-2 mb-4">
-            <h5 className="mb-3">Products</h5>
+            <h5 className="mb-3">Features</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
                 <Link href="/product/features/training" className="text-decoration-none text-dark">Training</Link>

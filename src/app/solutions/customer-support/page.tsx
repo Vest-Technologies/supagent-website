@@ -245,10 +245,11 @@ export default function CustomerSupportPage() {
             <h2 className="mb-3">Ready to Transform Your Customer Support?</h2>
             <p className="lead mb-4">Join hundreds of businesses that have revolutionized their customer support with SupAgent.</p>
             <div className="d-flex justify-content-center gap-3">
-              <Link href="/demo" className="btn btn-light btn-lg">
-                Request Demo
+              <Link href="/waitlist" className="btn btn-warning btn-lg">
+                <i className="bi bi-envelope-check me-2"></i>
+                Join the Waiting List
               </Link>
-              <Link href="/contact" className="btn btn-warning btn-lg">
+              <Link href="/support" className="btn btn-light btn-lg">
                 Contact Sales
               </Link>
             </div>

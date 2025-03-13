@@ -93,38 +93,45 @@ We are initially focusing on establishing a robust presence in Turkey by integra
 Our research reveals that no current project in Turkey offers this comprehensive solution. By studying the impressive growth of similar tools in the U.S. market—particularly those designed for platforms like Amazon and Shopify—we are confident in the significant market potential for our solution.
 Furthermore, we believe that this innovative approach has ample room to expand, not only in Turkey but also throughout Europe and the Middle East, paving the way for a transformative shift in customer and internal support services.
 
-Structure of the page
-0. Home Page
-1. Product
-	1.1. Feautures
-		1.1.1 Training
-		1.1.2 Customization
-		1.1.3 Multilanguage
-		1.1.4 AI Knowledge
-		1.1.5 Analytics
-		1.1.6 Hisrtory
-	1.2. Channels
-		1.2.1 Web
-		1.2.2 WhatsApp
-		1.2.3 Insta
-		1.2.4 Messenger
-		1.2.5 Slack
-2. Solutions
-	2.1 Customer Support
-	2.2 Sales Agent
-	2.3 HR Support
-	2.4 Onboarding Buddy
-	2.5 Education
-3. FAQ
-4. Support
-5. Pricing
+Differences:
+- The project enables users to customie their chatbots appearance however they like. Colors, fonts, size, etc. 
+- Enables full language availability for Turkish
+- Users will be able to create flows for their own desire. These flows will enable business to automate tasks such as creating tickets, updating product inventory data, calender updates, doc updates and many more.
+- Very easy and intuitive training with own data such as website, file (csv, doc, pdf, txt), text, google docs, notion
+- The agent has 100+ personalities such as customer support, sales assistant, and many more.
+- They can integrate to their whatsapp, slack, messenger, instagram, web.
+- They can connect their agent to zapier, make.com.
+- The users will be able to change their ai models (more then 10 models from different companies)
+- When the user asks the users can direct the support to human.
+- The business will have live analytics.
+- The businnes will generate leads by using this tool.
 
-Footer
-1. About Us
-2. Terms of Use
-3. Privacy Policy
-4. Data Processing Agreement
-5. GDPR
+Screenshots:
+I have added these screenshots to the public/screenshots folder for you to use in the website. They all are png files.
+Ai-Settings-en
+Ai-Settings-tr
+Analytics-en
+Analytics-tr
+Bubble-en
+Bubble-tr
+Chatbot-en
+Chatbot-tr
+Chats-en
+Chats-tr
+Customization-en
+Customization-tr
+General-Settings-en
+General-Settings-tr
+Integration-en
+Integration-tr
+List-en
+List-tr
+Personality-en
+Personality-tr
+Sync-en
+Sync-tr
+WebsiteTraining-en
+WebsiteTraining-tr
 
 
 Follow Next.js docs for Data Fetching, Rendering, and Routing.
