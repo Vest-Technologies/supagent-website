@@ -33,9 +33,9 @@ const features = [
     icon: '📊'
   },
   {
-    title: 'History',
+    title: 'Chat History',
     description: 'Track and analyze all interactions and improvements',
-    path: '/features/history',
+    path: '/features/chat-history',
     icon: '📜'
   }
 ];

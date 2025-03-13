@@ -151,10 +151,32 @@ export default function Navbar() {
                       <li><a href="/product/features/multilanguage" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/multilanguage', e)}>Multilanguage</a></li>
                       <li><a href="/product/features/ai-technology" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/ai-technology', e)}>AI Technology</a></li>
                       <li><a href="/product/features/analytics" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/analytics', e)}>Analytics</a></li>
-                      <li><a href="/product/features/history" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/history', e)}>Chat History</a></li>
+                      <li><a href="/product/features/chat-history" className="dropdown-item" onClick={(e) => handleNavigation('/product/features/chat-history', e)}>Chat History</a></li>
                       <li>
                         <div className="dropdown-item d-flex align-items-center justify-content-between" style={{ cursor: 'default', pointerEvents: 'none' }}>
                           Action Flow
+                          <span
+                            className="ms-2 d-inline-flex align-items-center"
+                            style={{
+                              fontSize: '0.65rem',
+                              fontWeight: 600,
+                              backgroundColor: 'rgba(255, 142, 3, 0.15)',
+                              color: '#ff8e03',
+                              padding: '1px 6px',
+                              borderRadius: '4px',
+                              boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                              letterSpacing: '0.2px',
+                              textTransform: 'uppercase',
+                              whiteSpace: 'nowrap'
+                            }}
+                          >
+                            Coming soon
+                          </span>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="dropdown-item d-flex align-items-center justify-content-between" style={{ cursor: 'default', pointerEvents: 'none' }}>
+                          Human Intervention
                           <span
                             className="ms-2 d-inline-flex align-items-center"
                             style={{

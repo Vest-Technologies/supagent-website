@@ -30,7 +30,7 @@ export default function Footer() {
                 <Link href="/product/features/analytics" className="text-decoration-none text-dark">Analytics</Link>
               </li>
               <li className="mb-2">
-                <Link href="/product/features/history" className="text-decoration-none text-dark">History</Link>
+                <Link href="/product/features/chat-history" className="text-decoration-none text-dark">Chat History</Link>
               </li>
             </ul>
           </div>
