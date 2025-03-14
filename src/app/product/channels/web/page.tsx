@@ -61,7 +61,7 @@ export default function WebChannelPage() {
     'Proactive engagement based on user behavior',
     'Multilingual support for global audiences',
     'Contextual responses based on page content',
-    'Seamless handoff to human agents when needed'
+    'Seamless handoff to human agents when needed (coming soon)'
   ];
 
   const integrationSteps = [

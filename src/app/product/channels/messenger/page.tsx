@@ -51,7 +51,7 @@ export default function MessengerChannelPage() {
   const features = [
     'Facebook Messenger integration with AI responses',
     'Automated customer support and inquiries',
-    'Seamless handoff to human agents when needed',
+    'Seamless handoff to human agents when needed (coming soon)',
     'Multilingual support for global audiences',
     'Detailed analytics and conversation insights'
   ];
@@ -262,7 +262,7 @@ export default function MessengerChannelPage() {
                   <Card className="h-100 border-0 shadow-sm hover-lift">
                     <CardBody className="p-4 text-center">
                       <div className="fs-1 mb-3 text-primary">🔄</div>
-                      <h3 className="h5 mb-3">Human Handoff</h3>
+                      <h3 className="h5 mb-3">Human Handoff (coming soon)</h3>
                       <p className="text-muted mb-0">
                         Seamlessly transfer complex conversations to human agents when needed, with full conversation context.
                       </p>

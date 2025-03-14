@@ -372,7 +372,7 @@ export default function ChatHistoryPage() {
                           </div>
                           <div className="col-6 col-md-4">
                             <div className="stat-item">
-                              <div className="small text-muted">Human Escalation</div>
+                              <div className="small text-muted">Human Escalation (coming soon)</div>
                               <div className="fw-bold fs-5">12%</div>
                             </div>
                           </div>

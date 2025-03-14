@@ -95,7 +95,7 @@ export default function CustomerSupportPage() {
       image: '/illustrations/knowledge-base.svg'
     },
     {
-      title: 'Smart Escalation',
+      title: 'Smart Escalation (coming soon)',
       description: 'Intelligently escalates complex issues to human agents when necessary',
       image: '/illustrations/escalation.svg'
     },
@@ -114,7 +114,7 @@ export default function CustomerSupportPage() {
   // Customer support stats for modern section
   const supportStats = [
     {
-      value: '65%',
+      value: '60%',
       label: 'Cost Reduction',
       description: 'Average reduction in support costs for businesses using AI automation'
     },

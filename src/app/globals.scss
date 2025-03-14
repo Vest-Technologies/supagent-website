@@ -336,17 +336,6 @@ body {
       color: var(--primary);
       position: relative;
       margin: 5px 0;
-      
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 5px;
-        left: 0;
-        width: 100%;
-        height: 8px;
-        background-color: rgba(30, 149, 224, 0.2);
-        z-index: -1;
-      }
     }
   }
   

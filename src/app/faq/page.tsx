@@ -16,7 +16,7 @@ const faqs: FAQItem[] = [
     id: 1,
     category: "General",
     question: "What is SupAgent and how does it work?",
-    answer: "SupAgent is an AI-driven agent integrated support solution that automates customer support, business support, onboarding, sales, and more. It uses advanced AI technology to process inquiries through a continuously updated knowledge base, providing instant responses and automating repetitive tasks while seamlessly integrating with human support when needed."
+    answer: "SupAgent is an AI-driven agent integrated support solution that automates customer support, business support, onboarding, sales, and more. It uses advanced AI technology to process inquiries through a continuously updated knowledge base, providing instant responses and automating repetitive tasks while seamlessly integrating with human support (coming soon) when needed."
   },
   {
     id: 2,
@@ -76,7 +76,7 @@ const faqs: FAQItem[] = [
     id: 11,
     category: "Solutions",
     question: "How does the Customer Support solution work?",
-    answer: "Our Customer Support solution provides 24/7 automated support for customer inquiries and requests. Key benefits include 24/7 availability without increased staffing costs, instant responses to eliminate wait times, consistent quality across all interactions, multilingual support without additional resources, and reduced support costs of up to 65%. Features include knowledge base integration, smart escalation to human agents when necessary, customer sentiment analysis, and omnichannel support capabilities."
+    answer: "Our Customer Support solution provides 24/7 automated support for customer inquiries and requests. Key benefits include 24/7 availability without increased staffing costs, instant responses to eliminate wait times, consistent quality across all interactions, multilingual support without additional resources, and reduced support costs of up to 65%. Features include knowledge base integration, smart escalation to human agents (coming soon ) when necessary, customer sentiment analysis, and omnichannel support capabilities."
   },
   {
     id: 12,
@@ -118,7 +118,7 @@ const faqs: FAQItem[] = [
     id: 18,
     category: "Channels",
     question: "Can I integrate SupAgent with WhatsApp?",
-    answer: "Yes, SupAgent will soon offer WhatsApp integration through the official WhatsApp Business API. The integration will provide automated responses to common inquiries, seamless handoff to human agents when needed, multilingual support, and detailed analytics. The process involves applying for WhatsApp Business API with Meta (we'll guide you through this), configuring your AI agent, connecting your approved WhatsApp Business number to our platform, testing the implementation, and then launching. This allows your customers to get instant responses through WhatsApp without requiring additional staff."
+    answer: "Yes, SupAgent will soon offer WhatsApp integration through the official WhatsApp Business API. The integration will provide automated responses to common inquiries, seamless handoff to human agents (coming soon) when needed, multilingual support, and detailed analytics. The process involves applying for WhatsApp Business API with Meta (we'll guide you through this), configuring your AI agent, connecting your approved WhatsApp Business number to our platform, testing the implementation, and then launching. This allows your customers to get instant responses through WhatsApp without requiring additional staff."
   },
   {
     id: 19,
@@ -155,12 +155,6 @@ const faqs: FAQItem[] = [
     category: "Technical",
     question: "How secure is SupAgent with my data?",
     answer: "Security is a top priority at SupAgent. We implement industry-standard encryption, secure data storage practices, and regular security audits. Your data and your customers' information are protected in compliance with relevant data protection regulations. For specific security details, please contact our team or refer to our security documentation."
-  },
-  {
-    id: 25,
-    category: "Technical",
-    question: "How does SupAgent handle escalation to human agents?",
-    answer: "SupAgent includes smart escalation capabilities that can identify when a conversation needs human intervention. This can be triggered by specific keywords, complex queries, customer sentiment, or explicit requests for human support. When escalation occurs, relevant conversation history is provided to the human agent for seamless transition."
   },
   {
     id: 26,
@@ -256,13 +250,13 @@ const faqs: FAQItem[] = [
     id: 41,
     category: "Channels",
     question: "What benefits does the Instagram integration offer?",
-    answer: "SupAgent's upcoming Instagram integration will provide several benefits including Instagram DM automation with AI responses, comment monitoring and engagement, visual content analysis and responses, seamless handoff to human agents when needed, multilingual support for global audiences, and detailed analytics. The integration helps enhance customer experience with immediate responses and increases efficiency by automating routine interactions. This allows your team to focus on more strategic aspects of your Instagram presence while ensuring customers receive prompt responses."
+    answer: "SupAgent's upcoming Instagram integration will provide several benefits including Instagram DM automation with AI responses, comment monitoring and engagement, visual content analysis and responses, seamless handoff to human agents (coming soon) when needed, multilingual support for global audiences, and detailed analytics. The integration helps enhance customer experience with immediate responses and increases efficiency by automating routine interactions. This allows your team to focus on more strategic aspects of your Instagram presence while ensuring customers receive prompt responses."
   },
   {
     id: 42,
     category: "Channels",
     question: "How will the Facebook Messenger integration help my business?",
-    answer: "The upcoming Messenger integration will connect your Facebook business page with AI-powered support capabilities. Key features include automated customer support for common inquiries, seamless handoff to human agents for complex issues, multilingual support for global audiences, and detailed conversation analytics. The integration process is straightforward: connect your Facebook Business page, configure your AI agent with your brand voice and product knowledge, set response parameters, test the system, and launch. This integration helps you provide instant support to your Facebook audience while reducing the workload on your human agents."
+    answer: "The upcoming Messenger integration will connect your Facebook business page with AI-powered support capabilities. Key features include automated customer support for common inquiries, seamless handoff to human agents (coming soon) for complex issues, multilingual support for global audiences, and detailed conversation analytics. The integration process is straightforward: connect your Facebook Business page, configure your AI agent with your brand voice and product knowledge, set response parameters, test the system, and launch. This integration helps you provide instant support to your Facebook audience while reducing the workload on your human agents."
   },
   {
     id: 43,

@@ -58,7 +58,7 @@ export default function WhatsAppChannelPage() {
   const features = [
     'Official WhatsApp Business API integration',
     'Automated responses to common inquiries',
-    'Seamless handoff to human agents when needed',
+    'Seamless handoff to human agents when needed (coming soon)',
     'Multilingual support for global audiences',
     'Detailed analytics and conversation insights'
   ];

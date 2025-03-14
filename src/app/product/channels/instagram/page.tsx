@@ -59,7 +59,7 @@ export default function InstagramChannelPage() {
     'Instagram DM automation with AI responses',
     'Comment monitoring and engagement',
     'Visual content analysis and responses',
-    'Seamless handoff to human agents when needed',
+    'Seamless handoff to human agents when needed (coming soon)',
     'Multilingual support for global audiences',
     'Detailed analytics and conversation insights'
   ];

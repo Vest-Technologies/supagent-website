@@ -55,7 +55,7 @@ export default function Solutions() {
       <div className="container">
         <AnimatedSection variants={fadeUpVariant} className="text-center mb-5">
           <h2 className="section-title">Solutions for Every Need</h2>
-          <p className="section-subtitle">Our AI-driven solution offers comprehensive support across various business needs</p>
+          <p className="section-subtitle">Our AI-driven agent solutions offers comprehensive support across various business needs</p>
         </AnimatedSection>
         
         <div className="row">

@@ -35,7 +35,7 @@ const steps = [
     icon: "bi-rocket-takeoff-fill",
     color: "var(--green)",
     buttonText: "Start Integration",
-    link: "/product/channels/web"
+    link: "/product/channels"
   }
 ];
 
@@ -126,7 +126,7 @@ export default function SetupSteps() {
           <div className="action-card">
             <div className="action-content">
               <h3 className="action-title">Ready to transform your customer support?</h3>
-              <p className="action-text">Join hundreds of businesses already using SupAgent</p>
+              <p className="action-text">Be among the first businesses to use SupAgent</p>
             </div>
             
             <Link href="/waitlist">

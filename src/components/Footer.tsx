@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-md-4 mb-4">
             <h5 className="mb-3">About SupAgent</h5>
             <p className="text-content">
-              AI-Driven Agent Integrated Support Solution for reducing support burdens and optimizing operations.
+              Transform your customer support with our AI-powered solution. Reduce costs by up to 60%, provide 24/7 support, and achieve a 90% first-contact resolution rate - all while delivering consistent quality across multiple languages.
             </p>
           </div>
           <div className="col-md-2 mb-4">

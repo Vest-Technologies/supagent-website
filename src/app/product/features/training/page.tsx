@@ -213,7 +213,7 @@ export default function TrainingPage() {
             >
               <h1 className="section-title mb-3">AI Agent Training</h1>
               <p className="section-subtitle text-muted">
-                Empower your AI with comprehensive training capabilities to deliver exceptional support experiences.
+                Empower your AI agent with comprehensive training capabilities to deliver exceptional support experiences.
               </p>
             </motion.div>
 

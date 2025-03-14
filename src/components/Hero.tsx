@@ -61,13 +61,22 @@ export default function Hero() {
               </div>
               
               <h1 className="hero-title display-4 fw-bold mb-4">
-                Transform Your
+                Automate Your
                 <div className="hero-highlight">Business Support</div>
-                With Intelligent AI
+                With AI Agents
               </h1>
               
               <p className="hero-description lead mb-4">
-                Reduce support costs by up to 60% while improving customer satisfaction. Our AI agents handle inquiries 24/7, learn from interactions, and seamlessly escalate to human agents when needed.
+                Create custom AI agents with <motion.span
+                  className="text-primary fw-bold"
+                  style={{ 
+                    background: 'linear-gradient(120deg, #1e95e0 0%, #084f7e 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  SupAgent
+                </motion.span> for any business need - from customer support to sales, HR, and education. Our agents learn continuously, work 24/7, and reduce operational costs by up to 60%.
               </p>
               
               <ul className="hero-features mb-4">
@@ -116,7 +125,7 @@ export default function Hero() {
                   <div className="stat-label">Cost Reduction</div>
                 </div>
                 <div className="hero-stat">
-                  <div className="stat-value">15+</div>
+                  <div className="stat-value">10+</div>
                   <div className="stat-label">Integrations</div>
                 </div>
               </div>
