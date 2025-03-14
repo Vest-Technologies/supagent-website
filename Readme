@@ -1,6 +1,6 @@
 out, demo, node_modules, package.json, package-lock.json
 
-cd your-nextjs-app
+cd supagent-website
 git pull origin main
 npm install
 npm run build
