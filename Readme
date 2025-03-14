@@ -1,1 +1,7 @@
 out, demo, node_modules, package.json, package-lock.json
+
+cd your-nextjs-app
+git pull origin main
+npm install
+npm run build
+pm2 restart nextjs-app

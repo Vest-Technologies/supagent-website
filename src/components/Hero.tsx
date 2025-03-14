@@ -62,7 +62,7 @@ export default function Hero() {
               
               <h1 className="hero-title display-4 fw-bold mb-4">
                 Transform Your
-                <div className="hero-highlight">Customer Support</div>
+                <div className="hero-highlight">Business Support</div>
                 With Intelligent AI
               </h1>
               
