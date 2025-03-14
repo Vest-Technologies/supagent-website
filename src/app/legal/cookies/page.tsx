@@ -101,7 +101,7 @@ export default function CookiePolicy() {
 
           <section className="mb-4">
             <h2 className="h4 mb-3">Contact Us</h2>
-            <p>If you have questions about our use of cookies, please contact us at privacy@supagent.com.</p>
+            <p>If you have questions about our use of cookies, please contact us at privacy@supagent.ai.</p>
           </section>
         </Col>
       </Row>

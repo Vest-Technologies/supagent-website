@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
             <h2 className="h4 mb-3">Contact Us</h2>
             <p className="mb-2">If you have any questions about this Privacy Policy, please contact us at:</p>
             <ul>
-              <li>Email: privacy@supagent.com</li>
+              <li>Email: privacy@supagent.ai</li>
               <li>Address: [Your Company Address]</li>
             </ul>
           </section>

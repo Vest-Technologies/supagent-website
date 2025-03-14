@@ -25,12 +25,35 @@ export default function WaitlistForm() {
     setLoading(true);
     setError('');
     
-    // In a real application, you would send this data to your backend
-    // For now, we'll simulate a successful submission
-    setTimeout(() => {
+    try {
+      // Prepare payload for API
+      const payload = {
+        useCase: "waiting_list",
+        email: email,
+        name: name,
+        company_name: company || undefined // Only include if not empty
+      };
+
+      // Send request to endpoint
+      const response = await fetch('https://h5bhkostncehunn2wqgohlvgra0qxnbu.lambda-url.eu-north-1.on.aws/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
       setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setError('Failed to submit form. Please try again later.');
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
 
   return (

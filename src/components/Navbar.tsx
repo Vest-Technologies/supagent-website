@@ -245,11 +245,11 @@ export default function Navbar() {
                 {t.support}
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a href="/pricing" className="nav-link" onClick={(e) => handleNavigation('/pricing', e)}>
                 {t.pricing}
               </a>
-            </li>
+            </li> */}
           </ul>
           <div className="d-flex align-items-center">
             {/* Original buttons commented out for future use

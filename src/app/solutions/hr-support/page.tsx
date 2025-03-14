@@ -185,9 +185,9 @@ export default function HRSupportPage() {
                     <Link href="/waitlist" className="btn btn-primary btn-lg">
                       Join Waitlist
                     </Link>
-                    <Link href="/pricing" className="btn btn-outline-primary btn-lg">
+                    {/* <Link href="/pricing" className="btn btn-outline-primary btn-lg">
                       View Pricing
-                    </Link>
+                    </Link> */}
                   </div>
                 </motion.div>
               </Col>

@@ -77,12 +77,9 @@ export default function Footer() {
           <div className="col-md-2 mb-4">
             <h5 className="mb-3">Quick Links</h5>
             <ul className="list-unstyled">
-              <li className="mb-2">
-                <Link href="/about" className="text-decoration-none text-dark">About Us</Link>
-              </li>
-              <li className="mb-2">
+              {/* <li className="mb-2">
                 <Link href="/pricing" className="text-decoration-none text-dark">Pricing</Link>
-              </li>
+              </li> */}
               <li className="mb-2">
                 <Link href="/faq" className="text-decoration-none text-dark">FAQ</Link>
               </li>
@@ -106,9 +103,6 @@ export default function Footer() {
                 <Link href="/legal/dpa" className="text-decoration-none text-dark">Data Processing Agreement</Link>
               </li>
               <li className="me-4 mb-2">
-                <Link href="/gdpr" className="text-decoration-none text-dark">GDPR</Link>
-              </li>
-              <li className="me-4 mb-2">
                 <Link href="/legal/cookies" className="text-decoration-none text-dark">Cookie Policy</Link>
               </li>
             </ul>
@@ -118,11 +112,11 @@ export default function Footer() {
             <p className="text-content">
               Have questions? We're here to help!
               <br />
-              <a href="mailto:support@supagent.com" className="text-decoration-none text-dark">
-                support@supagent.com
+              <a href="mailto:support@supagent.ai" className="text-decoration-none text-dark">
+                support@supagent.ai
               </a>
             </p>
-            <button className="btn btn-primary btn-sm mt-2">Send Message</button>
+            <Link href="/support" className="btn btn-primary btn-sm mt-2">Send Message</Link>
           </div>
         </div>
         <hr className="my-4" />
