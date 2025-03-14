@@ -16,6 +16,38 @@ const quicksand = Quicksand({ subsets: ['latin'], variable: '--font-quicksand' }
 export const metadata: Metadata = {
   title: 'SupAgent - AI-Driven Agent Integrated Support Solution',
   description: 'Innovative AI agent-based product designed to reduce support burdens for companies and solo entrepreneurs.',
+  icons: {
+    icon: [
+      { url: '/icons/favicon.ico' },
+      { url: '/icons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/icons/safari-pinned-tab.svg', color: '#5bbad5' },
+    ],
+  },
+  manifest: '/manifest.json',
+  themeColor: '#ffffff',
+  appleWebApp: {
+    title: 'SupAgent',
+    statusBarStyle: 'default',
+  },
+  openGraph: {
+    type: 'website',
+    title: 'SupAgent - AI-Driven Agent Integrated Support Solution',
+    description: 'Innovative AI agent-based product designed to reduce support burdens for companies and solo entrepreneurs.',
+    siteName: 'SupAgent',
+    images: [{ url: '/images/og-image.png' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SupAgent - AI-Driven Agent Integrated Support Solution',
+    description: 'Innovative AI agent-based product designed to reduce support burdens for companies and solo entrepreneurs.',
+    images: [{ url: '/images/twitter-image.png' }],
+  },
 }
 
 export default function RootLayout({
