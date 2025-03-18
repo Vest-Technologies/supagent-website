@@ -1948,6 +1948,12 @@ button.dropdown-item {
   }
 }
 
+@media (max-width: 768px) {
+  .logo-img {
+    width: 150px;
+  }
+}
+
 .checkmark-circle {
   width: 80px;
   height: 80px;

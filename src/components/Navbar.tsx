@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
@@ -113,7 +112,7 @@ export default function Navbar() {
     <nav className={navbarClass}>
       <div className="container">
         <Link href="/" className="navbar-brand" onClick={(e) => handleNavigation('/', e)}>
-          <Image src="/logo.svg" alt="AI Agents Logo" height={50} width={60} />
+          <img className="logo-img" src="/logo.png" alt="AI Agents Logo" width={170} />
         </Link>
 
         <button
