@@ -126,7 +126,7 @@ export default function Hero() {
                     transition={{ duration: 0.5 }}
                   >
                     <Image 
-                      src="/illustrations/blond-assistant-holding-laptop.svg"
+                      src="/illustrations/blond-assistant-holding-laptop.png"
                       alt="AI Assistant"
                       width={600}
                       height={600}
