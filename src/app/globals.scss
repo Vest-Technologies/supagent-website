@@ -56,7 +56,7 @@
 body {
   font-family: var(--font-inter);
   color: #333;
-  padding-top: 76px;
+  padding-top: 61px;
   margin: 0;
   box-sizing: border-box;
 }
@@ -343,27 +343,6 @@ body {
     color: #555;
     font-size: 1.15rem;
     max-width: 540px;
-  }
-  
-  .hero-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    
-    li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-      
-      i {
-        margin-right: 10px;
-        color: var(--green);
-      }
-      
-      span {
-        font-weight: 500;
-      }
-    }
   }
   
   .hero-actions {

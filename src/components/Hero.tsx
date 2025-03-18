@@ -78,22 +78,6 @@ export default function Hero() {
                   SupAgent
                 </motion.span> for any business need - from customer support to sales, HR, and education. Our agents learn continuously, work 24/7, and reduce operational costs by up to 60%.
               </p>
-              
-              <ul className="hero-features mb-4">
-                <li>
-                  <i className="bi bi-check-circle-fill text-success"></i>
-                  <span>Easy integration with popular platforms</span>
-                </li>
-                <li>
-                  <i className="bi bi-check-circle-fill text-success"></i>
-                  <span>Fully customizable to match your brand</span>
-                </li>
-                <li>
-                  <i className="bi bi-check-circle-fill text-success"></i>
-                  <span>Multi-language support including Turkish</span>
-                </li>
-              </ul>
-              
               <div className="hero-actions d-flex flex-wrap gap-3">
                 <motion.a 
                   href="/waitlist" 
