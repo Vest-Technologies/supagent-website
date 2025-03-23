@@ -62,6 +62,13 @@ export default function RootLayout({
         <link rel="icon" href="/icons/favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="icon" href="/icons/favicon-32x32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
+        <script
+          src="https://chatbot-content-public-test.s3.eu-north-1.amazonaws.com/general/supagent.umd.js?v=1.0.0"
+          data-id="806a46b6-44fc-4f2e-8c03-f3f21215a2fc"
+          data-env="TEST"
+          id="supagent-script"
+          async defer>
+        </script>
       </head>
       <body className={`${quicksand.variable} ${inter.variable} font-quicksand`}>
         <Navbar />
