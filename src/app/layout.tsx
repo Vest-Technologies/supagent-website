@@ -72,7 +72,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-MEASUREMENT_ID');
+            gtag('config', 'G-PBS8PEV2ET');
           `}
         </Script>
         <script
