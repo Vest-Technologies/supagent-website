@@ -77,7 +77,7 @@ export default function RootLayout({
         </Script>
         <script
           src="https://chatbot-content-public-test.s3.eu-north-1.amazonaws.com/general/supagent.umd.js?v=1.0.0"
-          data-id="806a46b6-44fc-4f2e-8c03-f3f21215a2fc"
+          data-id="2801d1fa-4178-4f08-af38-bec8aa2e8eaf"
           data-env="TEST"
           id="supagent-script"
           async defer>
